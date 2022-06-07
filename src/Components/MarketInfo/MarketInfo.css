@@ -59,6 +59,7 @@
 }
 .header-row > .market-info-game {
   color: white;
+  cursor: pointer;
 }
 .header-row > .market-info-game {
   font-size: 20px;
