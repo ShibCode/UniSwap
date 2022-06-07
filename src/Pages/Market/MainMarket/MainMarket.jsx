@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MainMarket.css";
 import { faSearch, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +6,23 @@ import rinkeby from "../../../Assets/rinkeby.svg";
 import bscTest from "../../../Assets/bsc-test.svg";
 
 export default function MainMarket() {
+  
+  const removeSelectedBtnClass = function(){
+    const buttons = document.querySelectorAll('.settings-btn');
+    buttons.forEach(button => {
+      button.classList.remove('selected-market-btn');
+    })
+  }
+  
+  useEffect(() => {
+    const buttons = document.querySelectorAll('.settings-btn');
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            button.classList.add("selected-market-btn");
+          })
+    })
+  }, [)
+  
   return (
     <div className="main-market">
       <div className="main-market-header">
