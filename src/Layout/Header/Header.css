@@ -1,0 +1,132 @@
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: hsla(220, 11%, 11%, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.logo:hover {
+  opacity: 0.6;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+.nav-list-item {
+  --text-opacity: 0.6;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 17px;
+}
+.nav-list-item:hover {
+  --text-opacity: 1;
+}
+.nft-staking {
+  background-color: rgb(255, 0, 122);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.nft-staking:hover {
+  background-color: rgb(255, 0, 122, 0.8);
+}
+.hammenu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .nav-right {
+    gap: 1.5rem;
+  }
+  .nav-list {
+    gap: 1.5rem;
+  }
+  .nav-list-item {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .nav-right {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(48, 50, 53) !important;
+    flex-direction: column;
+    padding: 7.5rem 1.5rem;
+    transition: all 0.2s ease;
+    align-items: flex-start;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-list-item {
+    font-size: 18px;
+    padding: 1rem 0;
+  }
+  .header-btn {
+    display: none;
+  }
+  .hammenu-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.15s ease;
+  }
+  .hammenu-btn:hover {
+    background-color: hsla(0, 0%, 0%, 0.2);
+  }
+  .hammenu-btn:active {
+    background-color: hsla(0, 0%, 0%, 0.4);
+  }
+  .header-icon {
+    font-size: 32px;
+    color: white;
+    display: none;
+  }
+}
+
+.show {
+  display: block;
+}
+.show-nav {
+  right: 0;
+}
