@@ -50,7 +50,7 @@
   background-color: rgba(53, 55, 58, 1);
   border: none;
   padding: 0.75rem 1rem;
-  border-radius: 16px;
+  border-radius: 24px;
   color: white;
   font-size: 1rem;
   font-weight: 400;
@@ -75,7 +75,7 @@
       rgba(15, 53, 255, 0.08) 75.06%,
       rgba(15, 53, 255, 0.11) 107.66%
     );
-  border-radius: 1rem;
+  border-radius: 24px;
   z-index: -1;
 }
 .arrow-up {

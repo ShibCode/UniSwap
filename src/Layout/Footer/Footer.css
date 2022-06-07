@@ -12,7 +12,10 @@
 }
 .footer-para {
   color: rgb(136, 141, 155);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 @media screen and (max-width: 1000px) {
   .footer {

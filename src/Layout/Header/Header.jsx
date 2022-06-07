@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "../../Assets/logo.svg";
+import { Link } from "react-router-dom";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -14,13 +15,21 @@ export default function Header() {
   return (
     <div className="header">
       <nav className="nav">
-        <img src={logo} className="logo" />
+        <Link to="/">
+          <img src={logo} className="logo" />
+        </Link>
         <div className={navBarClasses}>
-          <ul className="nav-list">
-            <li className="nav-list-item">Liquidity as a service</li>
-            <li className="nav-list-item">Gaming guild</li>
-            <li className="nav-list-item">Community</li>
-          </ul>
+          <div className="nav-links">
+            <Link to="/market" className="nav-link">
+              Liquidity as a service
+            </Link>
+            <Link to="#" className="nav-link">
+              Gaming guild
+            </Link>
+            <Link to="#" className="nav-link">
+              Community
+            </Link>
+          </div>
           <button className="nft-staking header-btn">NFT Staking</button>
         </div>
         <button

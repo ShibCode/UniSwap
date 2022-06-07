@@ -29,19 +29,20 @@
   align-items: center;
   gap: 2.5rem;
 }
-.nav-list {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 2.5rem;
 }
-.nav-list-item {
+.nav-link {
   --text-opacity: 0.6;
   color: rgba(255, 255, 255, var(--text-opacity));
   font-weight: 500;
   cursor: pointer;
   font-size: 17px;
+  text-decoration: none;
 }
-.nav-list-item:hover {
+.nav-link:hover {
   --text-opacity: 1;
 }
 .nft-staking {
@@ -66,10 +67,10 @@
   .nav-right {
     gap: 1.5rem;
   }
-  .nav-list {
+  .nav-links {
     gap: 1.5rem;
   }
-  .nav-list-item {
+  .nav-link {
     font-size: 16px;
   }
 }
@@ -86,11 +87,11 @@
     transition: all 0.2s ease;
     align-items: flex-start;
   }
-  .nav-list {
+  .nav-links {
     flex-direction: column;
     gap: 0;
   }
-  .nav-list-item {
+  .nav-link {
     font-size: 18px;
     padding: 1rem 0;
   }

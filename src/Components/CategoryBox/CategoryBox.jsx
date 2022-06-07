@@ -1,5 +1,5 @@
 import React from "react";
-import { faArrowRight, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./CategoryBox.css";
 

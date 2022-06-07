@@ -81,6 +81,7 @@ body {
 .stat-para {
   font-size: 14px;
   text-align: center;
+  color: rgb(136, 141, 155);
 }
 .about-btn {
   margin: 1rem 7.5rem;
