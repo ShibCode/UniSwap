@@ -23,7 +23,7 @@ export default function Header() {
             <Link to="/market" className="nav-link">
               Liquidity as a service
             </Link>
-            <Link to="#" className="nav-link">
+            <Link to="/gamingguild" className="nav-link">
               Gaming guild
             </Link>
             <Link to="#" className="nav-link">

@@ -1,0 +1,77 @@
+.gaming-guild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  padding-top: 50px;
+  gap: 5rem;
+}
+.gaming-guild-header {
+  background-color: #281c3c;
+  max-width: 1000px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0;
+  color: white;
+  border-radius: 16px;
+}
+.gg-header-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+.header-item-heading {
+  text-align: center;
+  font-size: 20px;
+}
+.header-item-value {
+  font-size: 30px;
+  text-align: center;
+}
+.exc ~ .gg-header-item {
+  border-left: 1px dashed white;
+}
+.gaming-guild-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 90%;
+}
+.top-game-interest {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.top-game-interest-heading {
+  color: white;
+}
+
+@media screen and (max-width: 760px) {
+  .header-item-heading {
+    font-size: 20px;
+  }
+  .header-item-value {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .gaming-guild-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .gaming-guild-main {
+    width: 90%;
+  }
+  .top-game-interest {
+    width: 100%;
+  }
+  .gg-header-item {
+    width: 100%;
+  }
+  .exc ~ .gg-header-item {
+    border: none;
+  }
+}
