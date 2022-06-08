@@ -53,8 +53,27 @@
 }
 .recharts-wrapper {
   transform: translate(-49px, -25px);
+  max-width: 400px;
+  width: 90% !important;
 }
 
+@media screen and (max-width: 1080px) {
+  .gaming-guild-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 7.5rem;
+  }
+  .top-game-interest-heading {
+    text-align: center;
+  }
+  .chart-heading {
+    text-align: center;
+  }
+  .recharts-wrapper {
+    transform: translate(0, -10%);
+    margin-bottom: -12rem;
+  }
+}
 @media screen and (max-width: 760px) {
   .header-item-heading {
     font-size: 20px;
@@ -70,15 +89,29 @@
     gap: 1.5rem;
   }
   .gaming-guild-main {
-    width: 90%;
+    width: 100%;
   }
   .top-game-interest {
-    width: 100%;
+    width: 90%;
   }
   .gg-header-item {
     width: 100%;
   }
   .exc ~ .gg-header-item {
     border: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .top-game-interest-heading {
+    font-size: 28px;
+  }
+  .chart-heading {
+    font-size: 28px;
+  }
+  .recharts-wrapper {
+    margin: auto;
+  }
+  .recharts-surface {
+    width: 100%;
   }
 }
