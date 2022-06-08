@@ -12,6 +12,7 @@ export default function index() {
           "allows any investors, including gaming guilds, staking their gamefi NFT assets and generate stable yield with no effort required "
         }
         title={"NFT Staking"}
+        id="Staking"
       />
       <CategoryBox
         desc={
@@ -19,12 +20,14 @@ export default function index() {
         }
         title={"Liquidity as a service"}
         order={true}
+        id="Liquidity"
       />
       <CategoryBox
         desc={
           "currently running 5 scholarship program with over 1000 qualified scholars across the metaverse. We strongly believe education & organizing events are the key drivers to bring more members into blockchain world."
         }
         title={"Gaming guild"}
+        id="Gaming"
       />
       <CategoryBox
         desc={
@@ -32,6 +35,7 @@ export default function index() {
         }
         title={"Community"}
         order={true}
+        id="Community"
       />
     </div>
   );

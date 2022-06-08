@@ -20,17 +20,19 @@ export default function Header() {
         </Link>
         <div className={navBarClasses}>
           <div className="nav-links">
-            <Link to="/market" className="nav-link">
+            <a href="/#Liquidity" className="nav-link">
               Liquidity as a service
-            </Link>
-            <Link to="/gamingguild" className="nav-link">
+            </a>
+            <a href="/#Gaming" className="nav-link">
               Gaming guild
-            </Link>
-            <Link to="#" className="nav-link">
+            </a>
+            <a href="/#Community" className="nav-link">
               Community
-            </Link>
+            </a>
           </div>
-          <button className="nft-staking header-btn">NFT Staking</button>
+          <Link to={"/Staking"} className="nft-staking header-btn">
+            NFT Staking
+          </Link>
         </div>
         <button
           className="hammenu-btn"

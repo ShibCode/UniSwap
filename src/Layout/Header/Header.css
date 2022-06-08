@@ -55,6 +55,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: all 0.15s ease;
+  text-decoration: none;
 }
 .nft-staking:hover {
   background-color: rgb(255, 0, 122, 0.8);

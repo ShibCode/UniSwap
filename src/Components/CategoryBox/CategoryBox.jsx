@@ -3,9 +3,9 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./CategoryBox.css";
 
-export default function CategoryBox({ title, desc, order }) {
+export default function CategoryBox({ title, desc, order, id }) {
   return (
-    <div className="category">
+    <div className="category" id={id}>
       <div className={`category-left ${order ? "order2" : ""}`}>
         <h2 className="category-heading">{title}</h2>
         <p className="category-para">{desc}</p>

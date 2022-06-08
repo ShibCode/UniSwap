@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route exact path="/market" element={<Market />} />
+        <Route exact path="/Staking" element={<Market />} />
         <Route exact path="/gamingguild" element={<GamingGuild />} />
       </Routes>
       <Footer />
