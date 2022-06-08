@@ -3,6 +3,7 @@ import "./GamingGuild.css";
 import TopGameInterest from "../../Components/TopGameInterest/TopGameInterest";
 import kyoko from "../../Assets/kyoko.png";
 import uniswapKyoko from "../../Assets/uniswap-kyoko.png";
+import Chart from "../../Components/Chart/Chart";
 
 export default function GamingGuild() {
   return (
@@ -36,6 +37,10 @@ export default function GamingGuild() {
             gameImg={uniswapKyoko}
             interest="0"
           />
+        </div>
+        <div className="gaming-guild-chart">
+          <h1 className="chart-heading">Deposit Commodities</h1>
+          <Chart />
         </div>
       </div>
     </div>
