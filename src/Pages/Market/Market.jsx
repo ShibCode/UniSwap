@@ -28,7 +28,7 @@ export default function Market() {
           users="11K"
           transactions="1.65M"
           volume="0"
-          activity="100"
+          activity="85"
         />
         <MarketInfo
           gameThumbnail={uniswapKyoko}
@@ -38,7 +38,7 @@ export default function Market() {
           users="70.65K"
           transactions="668.33K"
           volume="0"
-          activity="80"
+          activity="60"
         />
       </div>
     </div>

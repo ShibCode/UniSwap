@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import {
   faTwitter,
@@ -8,6 +8,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "Uniswap";
+  }, []);
+
   return (
     <div className="about">
       <span className="about-glimmer-bg about-bg"></span>

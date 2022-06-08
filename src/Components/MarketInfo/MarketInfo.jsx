@@ -11,6 +11,10 @@ export default function MarketInfo({
   volume,
   activity,
 }) {
+  let activityBarStyle = {
+    width: `${activity}%`,
+  };
+
   return (
     <div className="market-info-row">
       <div className="market-info-game row-data">
@@ -24,7 +28,11 @@ export default function MarketInfo({
       <div className="market-info-users row-data">{users}</div>
       <div className="market-info-transactions row-data">{transactions}</div>
       <div className="market-info-volume row-data">{volume}</div>
-      <div className="market-info-activity row-data">{activity}</div>
+      <div className="market-info-activity row-data">
+        <div className="bar-bg">
+          <div className="activity-bar" style={activityBarStyle}></div>
+        </div>
+      </div>
     </div>
   );
 }

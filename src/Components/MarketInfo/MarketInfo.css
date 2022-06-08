@@ -64,6 +64,20 @@
 .header-row > .market-info-game {
   font-size: 20px;
 }
+.market-info-activity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bar-bg {
+  width: 100%;
+  background-color: #333;
+}
+.activity-bar {
+  height: 3px;
+  background-color: lightblue;
+  padding: 0 8px;
+}
 
 @media screen and (max-width: 1080px) {
   .market-info {
@@ -75,11 +89,11 @@
     border: 0;
   }
   .market-info-row {
-    width: 830px;
+    width: 975px;
   }
 }
 @media screen and (max-width: 780px) {
   .market-info-row {
-    width: 815px;
+    width: 775px;
   }
 }

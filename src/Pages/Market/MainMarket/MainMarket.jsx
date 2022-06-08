@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainMarket.css";
 import { faSearch, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,23 +6,43 @@ import rinkeby from "../../../Assets/rinkeby.svg";
 import bscTest from "../../../Assets/bsc-test.svg";
 
 export default function MainMarket() {
-  
-  const removeSelectedBtnClass = function(){
-    const buttons = document.querySelectorAll('.settings-btn');
-    buttons.forEach(button => {
-      button.classList.remove('selected-market-btn');
-    })
-  }
-  
+  let [activeBtn, setActiveBtn] = useState("btn1");
+  let [activeTimeFilter, setActiveTimeFilter] = useState("24 Hours");
+  let [isOpen, setIsOpen] = useState(false);
+
+  const btn1Classes = `settings-btn ${
+    activeBtn == "btn1" ? "selected-market-btn" : ""
+  }`;
+  const btn2Classes = `settings-btn ${
+    activeBtn == "btn2" ? "selected-market-btn" : ""
+  }`;
+  const btn3Classes = `settings-btn ${
+    activeBtn == "btn3" ? "selected-market-btn" : ""
+  }`;
+  const dropdownMenuClasses = `dropdown-menu ${
+    isOpen ? "show-dropdown-menu" : ""
+  }`;
+
   useEffect(() => {
-    const buttons = document.querySelectorAll('.settings-btn');
-        buttons.forEach(button => {
-          button.addEventListener('click', () => {
-            button.classList.add("selected-market-btn");
-          })
-    })
-  }, [)
-  
+    document.title = "Market";
+
+    document.body.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("dropdown") ||
+        e.target.classList.contains("dropdown-menu") ||
+        e.target.classList.contains("dropdown-arrow")
+      ) {
+      } else {
+        setIsOpen(false);
+      }
+    });
+    document.body.addEventListener("keydown", (e) => {
+      if (e.key == "Escape") {
+        setIsOpen(false);
+      }
+    });
+  }, []);
+
   return (
     <div className="main-market">
       <div className="main-market-header">
@@ -34,11 +54,28 @@ export default function MainMarket() {
       </div>
       <div className="main-market-settings">
         <div className="upper-settings">
-          <button className="settings-btn selected-market-btn">ALL</button>
-          <button className="settings-btn">
+          <button
+            className={btn1Classes}
+            onClick={() => {
+              setActiveBtn("btn1");
+            }}
+          >
+            ALL
+          </button>
+          <button
+            className={btn2Classes}
+            onClick={() => {
+              setActiveBtn("btn2");
+            }}
+          >
             <img src={rinkeby} /> Rinkeby
           </button>
-          <button className="settings-btn">
+          <button
+            className={btn3Classes}
+            onClick={() => {
+              setActiveBtn("btn3");
+            }}
+          >
             <img src={bscTest} /> Bsc test
           </button>
         </div>
@@ -80,10 +117,49 @@ export default function MainMarket() {
           />
           <FontAwesomeIcon icon={faSearch} className="search-icon" />
         </div>
-        <button className="dropdown">
-          24 Hours{" "}
-          <FontAwesomeIcon icon={faAngleDown} className="dropdown-arrow" />
-        </button>
+        <div className="drop-down">
+          <button
+            className="dropdown"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            {activeTimeFilter}
+            <FontAwesomeIcon icon={faAngleDown} className="dropdown-arrow" />
+          </button>
+          <div className={dropdownMenuClasses}>
+            <button
+              className={
+                activeTimeFilter == "24 Hours" ? "active-time-filter" : ""
+              }
+              onClick={() => {
+                setActiveTimeFilter("24 Hours");
+              }}
+            >
+              24 Hours
+            </button>
+            <button
+              className={
+                activeTimeFilter == "7 Days" ? "active-time-filter" : ""
+              }
+              onClick={() => {
+                setActiveTimeFilter("7 Days");
+              }}
+            >
+              7 Days
+            </button>
+            <button
+              className={
+                activeTimeFilter == "30 Days" ? "active-time-filter" : ""
+              }
+              onClick={() => {
+                setActiveTimeFilter("30 Days");
+              }}
+            >
+              30 Days
+            </button>
+          </div>
+        </div>
         <p className="remaining-items">2 items</p>
       </div>
     </div>
