@@ -6,6 +6,7 @@ import {
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useEffect(() => {
@@ -21,7 +22,9 @@ export default function About() {
           A first-ever Gamefi focused Decentralized staking protocol starting
           off as a gaming guild
         </h1>
-        <button className="nft-staking about-btn">NFT Staking</button>
+        <Link to="/Staking" className="nft-staking about-btn">
+          NFT Staking
+        </Link>
         <div className="about-socials">
           <FontAwesomeIcon icon={faTwitter} className="social-icon" />
           <FontAwesomeIcon icon={faGithub} className="social-icon" />

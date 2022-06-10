@@ -87,6 +87,8 @@ body {
   margin: 1rem 7.5rem;
   width: 150px;
   display: none;
+  text-align: center;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1000px) {
