@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./Layout/Header/Header";
 import Index from "./Pages/Uniswap/Index";
 import Market from "./Pages/Market/Market";
 import GamingGuild from "./Pages/GamingGuild/GamingGuild";
@@ -9,7 +8,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route exact path="/" element={<Index />} />
         <Route exact path="/Staking" element={<Market />} />

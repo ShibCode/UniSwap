@@ -1,0 +1,24 @@
+.market-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 90px;
+  align-items: center;
+}
+.market-nav {
+  max-width: 1000px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.market-header-link {
+  --text-opacity: 0.6;
+  text-decoration: none;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  font-size: 20px;
+}
+.market-header-link:hover {
+  --text-opacity: 1;
+}

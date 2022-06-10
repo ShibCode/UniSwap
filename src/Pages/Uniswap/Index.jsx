@@ -2,10 +2,11 @@ import React from "react";
 import About from "./About/About";
 import CategoryBox from "../../Components/CategoryBox/CategoryBox";
 import "./UniswapIndex.css";
-
+import Header from "../../Layout/Header/Header";
 export default function index() {
   return (
     <div className="uniswap">
+      <Header />
       <About />
       <CategoryBox
         desc={
