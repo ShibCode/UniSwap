@@ -81,6 +81,9 @@
 .arrow-up {
   transform: rotate(45deg);
 }
+#Community{
+  margin-bottom: 7.5rem;
+}
 
 @media screen and (max-width: 1000px) {
   .category {
