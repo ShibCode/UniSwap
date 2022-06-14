@@ -16,13 +16,12 @@ export default function About() {
   return (
     <div className="about">
       <span className="about-glimmer-bg about-bg"></span>
-      <span className="about-banner-bg about-bg"></span>
       <div className="about-top">
         <h1 className="about-heading">
-          A first-ever Gamefi focused Decentralized staking protocol starting
+          A first-ever Gamefi focused decentralized staking protocol starting
           off as a gaming guild
         </h1>
-        <Link to="/Staking" className="nft-staking about-btn">
+        <Link to="/Market" className="nft-staking about-btn">
           NFT Staking
         </Link>
         <div className="about-socials">

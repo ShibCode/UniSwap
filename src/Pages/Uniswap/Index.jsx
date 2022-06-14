@@ -1,6 +1,10 @@
 import React from "react";
 import About from "./About/About";
 import CategoryBox from "../../Components/CategoryBox/CategoryBox";
+import liquidityAsService from "../../Assets/liquidityasservice.jpg";
+import gamingGuild from "../../Assets/gamingguild.jpg";
+import nftStaking from "../../Assets/nftstaking.jpg";
+import categoryBg from "../../Assets/category-bg.png";
 import "./UniswapIndex.css";
 import Header from "../../Layout/Header/Header";
 export default function index() {
@@ -10,10 +14,11 @@ export default function index() {
       <About />
       <CategoryBox
         desc={
-          "allows any investors, including gaming guilds, staking their gamefi NFT assets and generate stable yield with no effort required "
+          "Allows any investors, including gaming guilds, staking their gamefi NFT assets and generate stable yield with no effort required "
         }
         title={"NFT Staking"}
         id="Staking"
+        img={nftStaking}
       />
       <CategoryBox
         desc={
@@ -22,13 +27,15 @@ export default function index() {
         title={"Liquidity as a service"}
         order={true}
         id="Liquidity"
+        img={liquidityAsService}
       />
       <CategoryBox
         desc={
-          "currently running 5 scholarship program with over 1000 qualified scholars across the metaverse. We strongly believe education & organizing events are the key drivers to bring more members into blockchain world."
+          "Currently running 5 scholarship program with over 1000 qualified scholars across the metaverse. We strongly believe education & organizing events are the key drivers to bring more members into blockchain world."
         }
         title={"Gaming guild"}
         id="Gaming"
+        img={gamingGuild}
       />
       <CategoryBox
         desc={
@@ -37,6 +44,7 @@ export default function index() {
         title={"Community"}
         order={true}
         id="Community"
+        img={categoryBg}
       />
     </div>
   );

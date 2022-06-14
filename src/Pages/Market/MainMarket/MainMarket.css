@@ -25,6 +25,16 @@
   gap: 2rem;
   border-radius: 24px;
 }
+.polygon,
+.Polygon {
+  width: 20px;
+  margin-right: 5px;
+}
+.ronin,
+.Ronin {
+  width: 60px;
+  margin: 0 -17px;
+}
 .upper-settings {
   display: flex;
   gap: 1rem;
@@ -40,13 +50,13 @@
   gap: 4px;
   color: rgb(136, 141, 155);
   cursor: pointer;
-  padding: 0.5rem 1.25rem;
+  padding: 0.3rem 1.25rem;
   transition: color 0.2s ease;
 }
 .settings-btn:hover {
   color: white;
 }
-.market-info{
+.market-info {
   margin-bottom: 2.5rem;
 }
 .selected-market-btn {

@@ -3,6 +3,18 @@
   width: 90%;
   margin: auto;
 }
+.arrows {
+  display: flex;
+  flex-direction: column;
+}
+.fa-caret-up {
+  margin-bottom: -4px;
+  font-size: 15px;
+}
+.fa-caret-down {
+  margin-top: -4px;
+  font-size: 15px;
+}
 @media screen and (max-width: 1080px) {
   .market {
     max-width: 700px;

@@ -15,7 +15,7 @@ export default function TopGameInterest({ name, interest, sno, gameImg }) {
           />
           <span className="game-name">{name}</span>
         </div>
-        <h5 className="game-interest">$ {interest}</h5>
+        <h5 className="game-interest">{interest}</h5>
       </div>
     </div>
   );

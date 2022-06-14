@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route exact path="/Staking" element={<Market />} />
-        <Route exact path="/gamingguild" element={<GamingGuild />} />
+        <Route exact path="/Market" element={<Market />} />
+        <Route exact path="/Analysis" element={<GamingGuild />} />
       </Routes>
       <Footer />
     </Router>

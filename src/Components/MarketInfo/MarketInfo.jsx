@@ -22,7 +22,7 @@ export default function MarketInfo({
         {game}
       </div>
       <div className="market-info-blockchain row-data">
-        <img src={blockchainImg} />
+        <img src={blockchainImg} className={blockchain} />
         {blockchain}
       </div>
       <div className="market-info-users row-data">{users}</div>

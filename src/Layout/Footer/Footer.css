@@ -1,11 +1,12 @@
 .footer {
-  padding: 3rem 0;
+  padding: 2rem 0;
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .footer-heading {
-  font-size: clamp(26px, 5.777777777777778vw, 32px);
+  font-size: clamp(26px, 5.7vw, 32px);
   text-align: center;
   color: white;
 }
@@ -15,6 +16,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+.footer-about-socials {
+  width: fit-content;
+  padding: 0;
 }
 @media screen and (max-width: 1000px) {
   .footer {

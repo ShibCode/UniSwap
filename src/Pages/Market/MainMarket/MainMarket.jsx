@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./MainMarket.css";
 import { faSearch, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import rinkeby from "../../../Assets/rinkeby.svg";
-import bscTest from "../../../Assets/bsc-test.svg";
+import ronin from "../../../Assets/ronin.png";
+import polygon from "../../../Assets/polygon.png";
 
 export default function MainMarket() {
   let [activeBtn, setActiveBtn] = useState("btn1");
@@ -68,7 +68,7 @@ export default function MainMarket() {
               setActiveBtn("btn2");
             }}
           >
-            <img src={rinkeby} /> Rinkeby
+            <img src={polygon} className="polygon" /> Polygon
           </button>
           <button
             className={btn3Classes}
@@ -76,7 +76,7 @@ export default function MainMarket() {
               setActiveBtn("btn3");
             }}
           >
-            <img src={bscTest} /> Bsc test
+            <img src={ronin} className="ronin" /> Ronin
           </button>
         </div>
         <div className="lower-settings">
