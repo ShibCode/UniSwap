@@ -28,12 +28,13 @@
   max-width: 550px;
 }
 .category-right {
-  width: 600px;
+  width: 40%;
   height: 300px;
   padding: 1rem 1.5rem;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.19);
   position: relative;
+  background-color: hsla(0, 0%, 0%, 0.5);
 }
 .category-right-bg {
   position: absolute;

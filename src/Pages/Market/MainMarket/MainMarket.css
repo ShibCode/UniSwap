@@ -129,6 +129,9 @@
 .clear-all:hover {
   color: hsla(308, 100%, 50%, 0.8);
 }
+.clear-all:active {
+  color: hsla(308, 100%, 50%, 0.6);
+}
 .apply {
   height: fit-content;
   background-color: transparent;
@@ -145,6 +148,9 @@
 }
 .apply:hover {
   color: hsla(0, 0%, 100%, 0.8);
+}
+.apply:active {
+  color: hsla(0, 0%, 100%, 0.6);
 }
 .apply::before {
   content: "";
@@ -226,7 +232,8 @@
   box-shadow: 0 0 35px -15px black;
   transform: scaleY(0);
   transform-origin: top;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
+  z-index: 100;
 }
 .dropdown-menu > button {
   background-color: transparent;

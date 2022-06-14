@@ -6,6 +6,7 @@
 .arrows {
   display: flex;
   flex-direction: column;
+  transform: translateY(2px);
 }
 .fa-caret-up {
   margin-bottom: -4px;
@@ -14,6 +15,22 @@
 .fa-caret-down {
   margin-top: -4px;
   font-size: 15px;
+}
+.row-data-hover {
+  position: absolute;
+  width: 100%;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 8px 12px;
+  background-color: black;
+  bottom: -60%;
+  z-index: 1;
+  transform: translateY(100%) scaleY(0);
+  transform-origin: top;
+  transition: all 0.2s ease;
+}
+.row-data:hover .row-data-hover {
+  transform: translateY(100%) scaleY(1);
 }
 @media screen and (max-width: 1080px) {
   .market {
@@ -25,6 +42,9 @@
   .market {
     max-width: 350px;
     width: 100%;
+  }
+  .header-row > .row-data {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 375px) {

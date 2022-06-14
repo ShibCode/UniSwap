@@ -4,7 +4,7 @@ import CategoryBox from "../../Components/CategoryBox/CategoryBox";
 import liquidityAsService from "../../Assets/liquidityasservice.jpg";
 import gamingGuild from "../../Assets/gamingguild.jpg";
 import nftStaking from "../../Assets/nftstaking.jpg";
-import categoryBg from "../../Assets/category-bg.png";
+import community from "../../Assets/community.jpeg";
 import "./UniswapIndex.css";
 import Header from "../../Layout/Header/Header";
 export default function index() {
@@ -44,7 +44,7 @@ export default function index() {
         title={"Community"}
         order={true}
         id="Community"
-        img={categoryBg}
+        img={community}
       />
     </div>
   );
