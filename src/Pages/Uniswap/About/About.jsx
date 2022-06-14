@@ -32,20 +32,20 @@ export default function About() {
       </div>
       <div className="about-bottom">
         <div className="stat stat-1">
-          <h1 className="stat-heading">$1T+</h1>
-          <p className="stat-para">Trade Volume</p>
+          <h1 className="stat-heading">20,000</h1>
+          <p className="stat-para">Members</p>
         </div>
         <div className="stat stat-2">
-          <h1 className="stat-heading">99M+</h1>
-          <p className="stat-para">All Time Trades</p>
+          <h1 className="stat-heading">30+</h1>
+          <p className="stat-para">Games</p>
         </div>
         <div className="stat stat-3">
-          <h1 className="stat-heading">300+</h1>
-          <p className="stat-para">Integrations</p>
+          <h1 className="stat-heading">1000+</h1>
+          <p className="stat-para">Qualified Scholars</p>
         </div>
         <div className="stat stat-4">
-          <h1 className="stat-heading">4,400+</h1>
-          <p className="stat-para">Community Delegates</p>
+          <h1 className="stat-heading">$100,000</h1>
+          <p className="stat-para">Cumulative Earnings</p>
         </div>
       </div>
     </div>
