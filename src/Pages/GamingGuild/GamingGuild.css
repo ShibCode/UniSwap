@@ -53,8 +53,6 @@
 }
 .recharts-wrapper {
   transform: translate(-49px, -25px);
-  max-width: 400px;
-  width: 90% !important;
 }
 
 @media screen and (max-width: 1080px) {
