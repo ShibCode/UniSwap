@@ -5,19 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ronin from "../../../Assets/ronin.png";
 import polygon from "../../../Assets/polygon.png";
 
-export default function MainMarket() {
-  let [activeBtn, setActiveBtn] = useState("btn1");
+export default function MainMarket({ activeBtn, setActiveBtn }) {
   let [activeTimeFilter, setActiveTimeFilter] = useState("24 Hours");
   let [isOpen, setIsOpen] = useState(false);
 
   const btn1Classes = `settings-btn ${
-    activeBtn == "btn1" ? "selected-market-btn" : ""
+    activeBtn == "All" ? "selected-market-btn" : ""
   }`;
   const btn2Classes = `settings-btn ${
-    activeBtn == "btn2" ? "selected-market-btn" : ""
+    activeBtn == "Polygon" ? "selected-market-btn" : ""
   }`;
   const btn3Classes = `settings-btn ${
-    activeBtn == "btn3" ? "selected-market-btn" : ""
+    activeBtn == "Ronin" ? "selected-market-btn" : ""
   }`;
   const dropdownMenuClasses = `dropdown-menu ${
     isOpen ? "show-dropdown-menu" : ""
@@ -57,7 +56,7 @@ export default function MainMarket() {
           <button
             className={btn1Classes}
             onClick={() => {
-              setActiveBtn("btn1");
+              setActiveBtn("All");
             }}
           >
             ALL
@@ -65,7 +64,7 @@ export default function MainMarket() {
           <button
             className={btn2Classes}
             onClick={() => {
-              setActiveBtn("btn2");
+              setActiveBtn("Polygon");
             }}
           >
             <img src={polygon} className="polygon" /> Polygon
@@ -73,7 +72,7 @@ export default function MainMarket() {
           <button
             className={btn3Classes}
             onClick={() => {
-              setActiveBtn("btn3");
+              setActiveBtn("Ronin");
             }}
           >
             <img src={ronin} className="ronin" /> Ronin

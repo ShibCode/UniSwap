@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainMarket from "./MainMarket/MainMarket";
 import MarketInfo from "../../Components/MarketInfo/MarketInfo";
 import MarketHeader from "../../Components/MarketHeader/MarketHeader";
@@ -10,12 +10,52 @@ import "./Market.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
+let marketInfo = [
+  {
+    id: 1,
+    gameThumbnail: pegaxy,
+    game: "Pegaxy",
+    blockchain: "Polygon",
+    blockchainImg: polygon,
+    users: "100",
+    transactions: "1000",
+    volume: "1000",
+    activity: "85",
+  },
+  {
+    id: 2,
+    gameThumbnail: axieInfinity,
+    game: "Axie Infinity (Coming Soon)",
+    blockchain: "Ronin",
+    blockchainImg: ronin,
+    users: "-",
+    transactions: "-",
+    volume: "-",
+    activity: "-",
+  },
+];
+
 export default function Market() {
+  let [activeBtn, setActiveBtn] = useState("All");
+  let [filteredMarketInfo, updateArr] = useState([]);
+
+  useEffect(() => {
+    if (activeBtn == "All") {
+      updateArr([...marketInfo]);
+    } else {
+      let filtered = [];
+      filtered = marketInfo.filter((item) => {
+        return item.blockchain == activeBtn;
+      });
+      updateArr(filtered);
+    }
+  }, [activeBtn]);
+
   return (
     <>
       <MarketHeader />
       <div className="market">
-        <MainMarket />
+        <MainMarket activeBtn={activeBtn} setActiveBtn={setActiveBtn} />
         <div className="market-info">
           <div className="market-info-row header-row">
             <div className="market-info-game row-data">Game </div>
@@ -71,26 +111,21 @@ export default function Market() {
               </div>
             </div>
           </div>
-          <MarketInfo
-            gameThumbnail={pegaxy}
-            game="Pegaxy"
-            blockchain="Polygon"
-            blockchainImg={polygon}
-            users="100"
-            transactions="1000"
-            volume="1000"
-            activity="85"
-          />
-          <MarketInfo
-            gameThumbnail={axieInfinity}
-            game="Axie Infinity (Coming Soon)"
-            blockchain="Ronin"
-            blockchainImg={ronin}
-            users="-"
-            transactions="-"
-            volume="-"
-            activity="-"
-          />
+          {filteredMarketInfo.map((obj) => {
+            return (
+              <MarketInfo
+                key={obj.id}
+                gameThumbnail={obj.gameThumbnail}
+                game={obj.game}
+                blockchain={obj.blockchain}
+                blockchainImg={obj.blockchainImg}
+                users={obj.users}
+                transactions={obj.transactions}
+                volume={obj.volume}
+                activity={obj.activity}
+              />
+            );
+          })}
         </div>
       </div>
     </>

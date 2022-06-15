@@ -38,7 +38,7 @@ export default function About() {
       </div>
       <div className="about-bottom">
         <div className="stat stat-1">
-          <h1 className="stat-heading">20,000</h1>
+          <h1 className="stat-heading">20,000+</h1>
           <p className="stat-para">Members</p>
         </div>
         <div className="stat stat-2">
@@ -50,7 +50,7 @@ export default function About() {
           <p className="stat-para">Qualified Scholars</p>
         </div>
         <div className="stat stat-4">
-          <h1 className="stat-heading">$100,000</h1>
+          <h1 className="stat-heading">$100,000+</h1>
           <p className="stat-para">Cumulative Earnings</p>
         </div>
       </div>
