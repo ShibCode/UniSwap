@@ -12,8 +12,6 @@ export default function CategoryBox({ title, desc, order, id, img }) {
       </div>
       <div className="category-right">
         <img src={img} className="category-right-bg" />
-        <h1 className="category-right-heading">300+</h1>
-        <p className="category-right-para">Integrations</p>
         <button className="explore-all">
           Explore all <FontAwesomeIcon icon={faArrowUp} className="arrow-up" />
         </button>
