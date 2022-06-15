@@ -14,12 +14,12 @@
   gap: 2rem;
 }
 .market-header-link {
-  --text-opacity: 0.6;
   text-decoration: none;
-  color: rgba(255, 255, 255, var(--text-opacity));
+  color: rgba(255, 255, 255, 1);
   font-size: 20px;
   padding: 0.5rem 1.25rem;
   border-radius: 12px;
+  transition: all 0.2s ease;
 }
 .market-header-link:hover {
   --text-opacity: 1;
@@ -28,5 +28,5 @@
   margin-left: auto;
 }
 .selected-header-btn {
-  background-color: black;
+  background-color: #26a9ff;
 }
