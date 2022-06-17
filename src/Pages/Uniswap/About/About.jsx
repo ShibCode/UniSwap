@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.css";
+import gitBook from "../../../Assets/gitbook.svg";
 import {
   faTwitter,
   faMedium,
@@ -33,6 +34,14 @@ export default function About() {
           </a>
           <a href="https://discord.com/invite/RvDEBYpxYz" target="blank">
             <FontAwesomeIcon icon={faDiscord} className="social-icon" />
+          </a>
+          <a
+            href="https://alphadao.gitbook.io/alphadao-gaming-guild/"
+            target="blank"
+          >
+            <div className="gitbook">
+              <img src={gitBook} alt="gitbook" />
+            </div>
           </a>
         </div>
       </div>

@@ -21,6 +21,10 @@
   width: fit-content;
   padding: 0;
 }
+.gitbook {
+  width: 40px;
+  overflow: hidden;
+}
 @media screen and (max-width: 1000px) {
   .footer {
     margin-top: 5rem;

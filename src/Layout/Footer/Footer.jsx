@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import gitBook from "../../Assets/gitbook.svg";
 import {
   faTwitter,
   faMedium,
@@ -29,6 +30,14 @@ export default function Footer() {
             icon={faDiscord}
             className="social-icon footer-social-icon"
           />
+        </a>
+        <a
+          href="https://alphadao.gitbook.io/alphadao-gaming-guild/"
+          target="blank"
+        >
+          <div class="gitbook">
+            <img src={gitBook} alt="gitbook" />
+          </div>
         </a>
       </div>
     </div>
